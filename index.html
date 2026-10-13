@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clima da Paraíba</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Clima da Paraíba</h1>
+    <p>Previsão do tempo no estado</p>
+    <label for="city-input">Cidade</label>
+    <input
+      type="search"
+      id="city-input"
+      list="city-options"
+      placeholder="Digite ou escolha uma cidade…"
+      autocomplete="off"
+    />
+    <datalist id="city-options"></datalist>
+  </header>
+
+  <main>
+    <p id="status" aria-live="polite"></p>
+
+    <section id="current" hidden>
+      <h2 id="city-name"></h2>
+      <p id="condition"></p>
+      <p id="temp"></p>
+      <p id="details"></p>
+      <p>Atualizado em <time id="updated"></time></p>
+    </section>
+
+    <h2>Previsão para 7 dias</h2>
+    <ul id="forecast"></ul>
+  </main>
+
+  <footer>
+    <p>
+      Dados fornecidos por
+      <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer"
+        >Open-Meteo</a
+      >.
+    </p>
+  </footer>
+
+  <script src="cities.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
